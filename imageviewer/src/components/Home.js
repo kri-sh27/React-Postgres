@@ -67,7 +67,7 @@ const Home = () => {
                         return product.fname.toLowerCase().includes(lowerCaseQuery) ||
                             product.description.toLowerCase().includes(lowerCaseQuery) ||
                             product.price.toString().includes(lowerCaseQuery)
-                    }).map((el, i) => {
+                    }).map((el) => {
                         return (
                             <>
                                 <Card style={{ width: '20rem', height: "14rem" }} className="mb-3">
