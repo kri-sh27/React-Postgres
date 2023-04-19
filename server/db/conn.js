@@ -2,7 +2,7 @@ const { Pool } = require("pg");
 
 const conn = new Pool({
     user: "ubuntu",
-    host: "54.152.50.33",
+    host: "54.221.148.45",
     database: "productdata",
     password: "root",
     port: 5432,
