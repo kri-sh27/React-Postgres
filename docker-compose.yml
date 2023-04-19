@@ -6,7 +6,7 @@ services:
     ports:
       - "8004:8004"
     environment:
-      - DATABASE_URL=postgres://ubuntu:root@database:5432/productdata
+      - DATABASE_URL=postgres://****:****@database:****/*****
     depends_on:
       - database
 
