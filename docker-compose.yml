@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "8004:8004"
+    environment:
+      - DATABASE_URL=postgres://ubuntu:root@database:5432/productdata
+    depends_on:
+      - database
+
+  imageviewer:
+    build: ./imageviewer
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+  database:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_USER=ubuntu
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=productdata
